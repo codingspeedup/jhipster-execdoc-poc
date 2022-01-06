@@ -1,2 +1,2 @@
 # jhipster-execdoc-poc
-using execdoc framework to generate applications with JHipster 
+Proof of concept for using execdoc framework to build web applications with the JHipster generator. 
