@@ -4,6 +4,16 @@ import io.github.codingspeedup.execdoc.blueprint.Blueprint;
 import io.github.codingspeedup.execdoc.blueprint.kb.BpKb;
 import io.github.codingspeedup.execdoc.blueprint.kb.KbNames;
 import io.github.codingspeedup.execdoc.blueprint.kb.KbResult;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlDto;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlEnum;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlEnumEntry;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlFieldType;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.data.JdlEntity;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.data.JdlEntityRelationship;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.data.JdlField;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.structure.JdlApplication;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.structure.JdlValue;
+import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.sheets.EntitySheet;
 import io.github.codingspeedup.execdoc.toolbox.utilities.NumberUtility;
 import io.github.codingspeedup.execdoc.toolbox.utilities.StringUtility;
 import it.unibo.tuprolog.core.Term;
@@ -15,16 +25,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlDto;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlEnum;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlEnumEntry;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.code.JdlFieldType;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.data.JdlEntity;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.data.JdlEntityRelationship;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.data.JdlField;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.structure.JdlApplication;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.metamodel.structure.JdlValue;
-import io.github.codingspeedup.execdoc.poc.jhipster.blueprint.sheets.EntitySheet;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -112,8 +112,8 @@ public class JdlGenerator {
             jdl.append("\n").append(INDENT).append("}\n");
             ssValue = ss.getConfig(ENTITIES);
             if (ssValue != null && !ssValue.isBlank()) {
-                jdl.append(INDENT).append(ENTITIES);
-                ssValue.getValueList().stream().filter(StringUtils::isNotBlank).map(StringUtils::trim).forEach(e -> jdl.append(" ").append(e));
+                jdl.append(INDENT).append(ENTITIES).append(" ");
+                jdl.append(ssValue.getValueList().stream().filter(StringUtils::isNotBlank).map(StringUtils::trim).collect(Collectors.joining(", ")));
                 jdl.append("\n");
             }
             jdl.append("}\n\n");
