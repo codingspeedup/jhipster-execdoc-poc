@@ -8,7 +8,7 @@ and [execdoc-apps](https://github.com/codingspeedup/execdoc-apps) to build web a
 
 This project reduces the task of creating a running web application from scratch to editing an Excel file and clicking some buttons.
 
-After cloning the repository and executing class `JHipsterExecdocManager` the following window will appear:
+After cloning the repository and executing the class `JHipsterExecdocManager` the following window will appear:
 
 
 <img src="https://raw.githubusercontent.com/codingspeedup/jhipster-execdoc-poc/main/src/test/resources/readme/dialog.png" width="800" height="270">
