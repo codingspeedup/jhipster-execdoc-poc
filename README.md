@@ -11,6 +11,7 @@ This project reduces the task of creating a running web application from scratch
 After cloning the repository and executing class `JHipsterExecdocManager` the following window will appear:
 
 
+<img src="https://raw.githubusercontent.com/codingspeedup/jhipster-execdoc-poc/main/src/test/resources/readme/dialog.png" width="800" height="270">
 
 Here is a list of the supported functionalities:
 
@@ -24,11 +25,14 @@ Here is a list of the supported functionalities:
 | [ tuProlog ]           | Use this to open a Prolog IDE where you can open the `kb.pl` file and explore it |
 | [ Generate Project ]   | Generates the web application based on the specifications in `_master.xlsx` (jhipster has to be properly [installed and configured](https://www.jhipster.tech/installation/)). |
 
-Basically, what the last step does is to generate a [JDL](https://www.jhipster.tech/jdl/intro) specification file 
+Basically, what the last step does is to generate a [JDL specification](https://www.jhipster.tech/jdl/intro) file 
 and pass it as an argument to the `jhipster` OS command.
 
 Since the purpose of this brief introduction is not to detail the format and editing of `_master.xlsx` 
-a sample can be directly downloaded from [here].
-It will generate a JDL similar to the one given as an example in [JDL Studio (simple microservice)](https://start.jhipster.tech/jdl-studio/). 
+a sample can be directly downloaded from 
+[here](https://raw.githubusercontent.com/codingspeedup/jhipster-execdoc-poc/main/src/test/resources/readme/_master.xlsx).
+It will generate a 
+[JDL](https://raw.githubusercontent.com/codingspeedup/jhipster-execdoc-poc/main/src/test/resources/readme/default.jdl)
+similar to the one given as an example in [JDL Studio (simple microservice template)](https://start.jhipster.tech/jdl-studio/). 
 
 
